@@ -107,7 +107,7 @@ PrivateData = @{
         Tags = 'Brickset', 'LEGO', 'PScribo', 'Windows', 'Linux', 'MacOS', 'PSEdition_Desktop', 'PSEdition_Core'
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://raw.githubusercontent.com/tpcarman/BricksetCatalogue/main/LICENSE'
 
         # A URL to the main website for this project.
         ProjectUri = 'https://github.com/tpcarman/BricksetCatalogue'
