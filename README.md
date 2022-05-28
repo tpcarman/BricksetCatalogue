@@ -16,7 +16,9 @@
 </p>
 
 # BricksetCatalogue
-Creates a catalogue of LEGO sets and minifigs from a [Brickset](https://brickset.com/) inventory using the [Brickset API](https://brickset.com/article/52664/api-version-3-documentation). Catalogue can be exported to HTML, Word and/or Text formats.
+BricksetCatalogue creates a catalogue of LEGO sets and minifigs from a [Brickset](https://brickset.com/) inventory using the [Brickset API](https://brickset.com/article/52664/api-version-3-documentation).
+
+Brickset catalogues can be created in HTML, Word and/or Text formats.
 
 # :beginner: Getting Started
 
