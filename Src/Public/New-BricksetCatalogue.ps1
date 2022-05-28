@@ -252,7 +252,7 @@ function New-BricksetCatalogue {
             # Sets Sections
             if (($BrickSetSetOwned) -or ($BrickSetSetWanted)) {
                 Section -Style Heading1 "Sets" {
-                    if (($BrickSetSetOwned) -and ($ExcludeOwnedSets -eq $false)) {
+                    if (($BrickSetSetOwned) -and (!($ExcludeOwnedSets))) {
                         Section -Style Heading2 "Owned" {
                             foreach ($SetTheme in $BrickSetSetOwnedThemes) {
                                 Section -Style Heading3 $($SetTheme) {
@@ -300,7 +300,7 @@ function New-BricksetCatalogue {
                             }
                         }
                     }
-                    if (($BrickSetSetWanted) -and ($ExcludeWantedSets -eq $false)) {
+                    if (($BrickSetSetWanted) -and (!($ExcludeWantedSets))) {
                         Section -Style Heading2 "Wanted" {
                             foreach ($SetTheme in $BrickSetSetWantedThemes) {
                                 Section -Style Heading3 $($SetTheme) {
@@ -354,7 +354,7 @@ function New-BricksetCatalogue {
             # Minifigs Sections
             if (($BricksetMinifigOwned) -or ($BricksetMinifigWanted)) {
                 Section -Style Heading1 "Minfigs" {
-                    if (($BricksetMinifigOwned) -and ($ExcludeOwnedMinifigs -eq $false)) {
+                    if (($BricksetMinifigOwned) -and (!($ExcludeOwnedMinifigs))) {
                         Section -Style Heading2 "Owned" {
                             foreach ($MinfigOwned in $BricksetMinifigOwned) {
                                 Section -Style Heading3 -ExcludeFromTOC "$($MinfigOwned.minifigNumber): $($MinfigOwned.Name)" {
@@ -377,7 +377,7 @@ function New-BricksetCatalogue {
                             }
                         }
                     }
-                    if (($BricksetMinifigWanted) -and ($ExcludeWantedMinifigs -eq $false)) {
+                    if (($BricksetMinifigWanted) -and (!($ExcludeWantedMinifigs))) {
                         Section -Style Heading2 "Wanted" {
                             foreach ($MinifigWanted in $BricksetMinifigWanted) {
                                 Section -Style Heading3 -ExcludeFromTOC "$($MinifigWanted.minifigNumber): $($MinifigWanted.Name)" {
