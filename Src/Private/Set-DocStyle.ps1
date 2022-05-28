@@ -8,7 +8,7 @@ function Set-DocStyle {
     #Style -Name 'Title 3' -Size 12 -Color '000000' -Align Left
     Style -Name 'Heading 1' -Size 16 -Color 'B40000'
     Style -Name 'Heading 2' -Size 14 -Color '00852B'
-    Style -Name 'Heading 3' -Size 12 -Color 'FAC80A'
+    Style -Name 'Heading 3' -Size 12 -Color 'FCAC00'
     Style -Name 'Heading 4' -Size 11 -Color '1E5AA8'
     #Style -Name 'Heading 5' -Size 10 -Color '000000'
     Style -Name 'Normal' -Size 10 -Color '565656' -Default

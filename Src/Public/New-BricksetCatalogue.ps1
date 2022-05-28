@@ -46,7 +46,7 @@ function New-BricksetCatalogue {
         PS C:\>New-BricksetCatalogue -Format HTML,Word,Text -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
         Creates a Brickset catalogue in HTML, Word and Text formats using the specified username, password and API key.
     .NOTES
-        Version:        0.0.1
+        Version:        0.1.0
         Author:         Tim Carman
         Twitter:        @tpcarman
         Github:         tpcarman
@@ -258,7 +258,7 @@ function New-BricksetCatalogue {
                                 Section -Style Heading3 $($SetTheme) {
                                     $BrickSetSetOwnedByTheme = $BrickSetSetOwned | Where-Object {$_.theme -eq $SetTheme}
                                     foreach ($SetOwned in $BrickSetSetOwnedByTheme) {
-                                            Section -Style Heading4 -ExcludeFromTOC "$($SetOwned.Number): $($SetOwned.Name)" {
+                                        Section -Style Heading4 -ExcludeFromTOC "$($SetOwned.Number): $($SetOwned.Name)" {
                                             $Instructions = Get-BricksetSetInstructions -setId $SetOwned.setId
                                             Image -Uri $SetOwned.image.thumbnailURL -Align Center
                                             $SetOwnedInfo = [PSCustomObject] @{
@@ -281,6 +281,7 @@ function New-BricksetCatalogue {
                                                 'Availability' = $SetOwned.Availability
                                                 'Qty Owned' = $SetOwned.collection.qtyOwned
                                                 'Instructions' = $Instructions.URL -join [Environment]::NewLine
+                                                'Rating' = $SetOwned.Rating
                                                 'Notes' = Switch ($SetOwned.collection.notes) {
                                                     $null { '' }
                                                     default { $SetOwned.collection.notes }
@@ -306,7 +307,7 @@ function New-BricksetCatalogue {
                                 Section -Style Heading3 $($SetTheme) {
                                     $BrickSetSetWantedByTheme = $BrickSetSetWanted | Where-Object {$_.theme -eq $SetTheme}
                                     foreach ($SetWanted in $BrickSetSetWantedByTheme) {
-                                            Section -Style Heading4 -ExcludeFromTOC "$($SetWanted.Number): $($SetWanted.Name)" {
+                                        Section -Style Heading4 -ExcludeFromTOC "$($SetWanted.Number): $($SetWanted.Name)" {
                                             $Instructions = Get-BricksetSetInstructions -setId $SetWanted.setId
                                             Image -Uri $SetWanted.image.thumbnailURL -Align Center
                                             $SetWantedInfo = [PSCustomObject] @{
@@ -329,6 +330,7 @@ function New-BricksetCatalogue {
                                                 'Availability' = $SetWanted.Availability
                                                 'Qty Owned' = $SetWanted.collection.qtyOwned
                                                 'Instructions' = $Instructions.URL -join [Environment]::NewLine
+                                                'Rating' = $SetWanted.Rating
                                                 'Notes' = Switch ($SetWanted.collection.notes) {
                                                     $null { '' }
                                                     default { $SetWanted.collection.notes }

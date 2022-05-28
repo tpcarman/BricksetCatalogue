@@ -1,5 +1,5 @@
 # :arrows_clockwise: Brickset Catalogue Changelog
 
-## [0.0.1] - 2022-05-28
+## [0.1.0] - 2022-05-29
 ### Added
-- Initial commit
+- Initial release
