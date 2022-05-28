@@ -21,6 +21,10 @@ Creates a catalogue of LEGO sets and minifigs from a [Brickset](https://brickset
 # :beginner: Getting Started
 
 This simple list of instructions will get you started with the Brickset Catalogue module.
+## :one: Pre-requisites
+A [Brickset](https://brickset.com/) account and API key is required to use this module. If you do not have an existing Brickset account, you may sign up [here](https://brickset.com/signup). If you do not have an existing API key, you may request one [here](https://brickset.com/tools/webservices/requestkey).
+
+Once you have registered an account with Brickset, add the LEGO sets and minifigs which you own and want to your online Brickset inventory.
 
 ## :floppy_disk: Supported Versions
 ### **PowerShell**
@@ -28,16 +32,16 @@ The Brickset Catalogue module is compatible with the following PowerShell versio
 
 | Windows PowerShell 5.1 | PowerShell 7 |
 |:----------------------:|:------------------:|
-|   :white_check_mark:   | :white_check_mark: |
+|   :x:   |  > 7.1 :white_check_mark:|
 
 ## :wrench: System Requirements
 
 The following required modules will be installed automatically. These modules may also be manually installed.
 
-| Module Name        | Minimum Required Version |                          PS Gallery                           |                                   GitHub                                    |
-|--------------------|:------------------------:|:---------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-| PScribo            |          0.10.0           |      [Link](https://www.powershellgallery.com/packages/PScribo)       |         [Link](https://github.com/iainbrighton/PScribo/)
-| BricksetModule            |          2.1.0           |      [Link](https://www.powershellgallery.com/packages/Brickset)       |         [Link](https://github.com/jonathanmedd/BricksetModule/)
+| Module Name        | Minimum Required Version |                          PS Gallery                           |                                   GitHub | Author                                    |
+|--------------------| :-----: | :------------------------:|:---------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
+| PScribo            |          0.10.0           |      [Link](https://www.powershellgallery.com/packages/PScribo)       |         [Link](https://github.com/iainbrighton/PScribo/) | [@iainbrighton](https://twitter.com/iainbrighton)
+| BricksetModule            |         2.1.0           |      [Link](https://www.powershellgallery.com/packages/Brickset)       |         [Link](https://github.com/jonathanmedd/BricksetModule/) | [@jonathanmedd](https://twitter.com/jonathanmedd)
 
 ## :package: Module Installation
 
