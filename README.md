@@ -8,7 +8,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/tpcarman/BricksetCatalogue/graphs/commit-activity" alt="GitHub Last Commit">
-        <img src="https://img.shields.io/github/last-commit/tpcarman/BricksetCatalogue/master.svg" /></a>
+        <img src="https://img.shields.io/github/last-commit/tpcarman/BricksetCatalogue/main.svg" /></a>
     <a href="https://raw.githubusercontent.com/tpcarman/BricksetCatalogue/master/LICENSE" alt="GitHub License">
         <img src="https://img.shields.io/github/license/tpcarman/BricksetCatalogue.svg" /></a>
     <a href="https://github.com/tpcarman/BricksetCatalogue/graphs/contributors" alt="GitHub Contributors">

@@ -46,7 +46,7 @@ function New-BricksetCatalogue {
         PS C:\>New-BricksetCatalogue -Format HTML,Word -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
         Creates a Brickset catalogue in HTML and Word formats using the specified username, password and API key.
     .NOTES
-        Version:        0.1.1
+        Version:        0.1.2
         Author:         Tim Carman
         Twitter:        @tpcarman
         Github:         tpcarman
