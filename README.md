@@ -18,7 +18,7 @@
 # BricksetCatalogue
 BricksetCatalogue creates a catalogue of LEGO sets and minifigs from a [Brickset](https://brickset.com/) inventory using the [Brickset API](https://brickset.com/article/52664/api-version-3-documentation).
 
-Brickset catalogues can be created in HTML, Word and/or Text formats.
+Brickset catalogues can be created in HTML and/or Word formats.
 
 # :beginner: Getting Started
 
@@ -56,7 +56,7 @@ install-module BricksetCatalogue
 ## :pencil2: Commands
 
 ### **New-BricksetCatalogue**
-The `New-BricksetCatalogue` cmdlet is used to generate a [Brickset](https://brickset.com/) inventory catalogue using the [Brickset API](https://brickset.com/article/52664/api-version-3-documentation). User credentials for the Brickset API are specifed using the `Credential`, or the `Username` and `Password` parameters. One or more document formats, such as `HTML`, `Word` or `Text` can be specified using the `Format` parameter. Additional parameters are outlined below.
+The `New-BricksetCatalogue` cmdlet is used to generate a [Brickset](https://brickset.com/) inventory catalogue using the [Brickset API](https://brickset.com/article/52664/api-version-3-documentation). User credentials for the Brickset API are specifed using the `Credential`, or the `Username` and `Password` parameters. One or more document formats, such as `HTML` and/or `Word` can be specified using the `Format` parameter. Additional parameters are outlined below.
 
 ```powershell
 .SYNOPSIS
