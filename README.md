@@ -60,12 +60,12 @@ The `New-BricksetCatalogue` cmdlet is used to generate a [Brickset](https://bric
 
 ```powershell
 .SYNOPSIS
-    Creates a Word/HTML/Text catalogue of LEGO sets from a Brickset inventory using the Brickset API.
+    Creates an inventory catalogue of a Brickset collection in HTML & Word formats using the Brickset API.
 .DESCRIPTION
-    Creates a Word/HTML/Text catalogue of LEGO sets from a Brickset inventory using the Brickset API.
+    Creates an inventory catalogue of a Brickset collection in HTML & Word formats using the Brickset API - https://brickset.com/article/52664/api-version-3-documentation.
 .PARAMETER Format
     Specifies the output format of the catalogue.
-    The supported output formats are WORD, HTML & TEXT.
+    The supported output formats are HTML & WORD.
     Multiple output formats may be specified, separated by a comma.
 .PARAMETER Credential
     Specifies the stored credential for the Brickset API.
@@ -109,8 +109,8 @@ PS C:\>New-BricksetCatalogue -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 
 # Creates a Brickset catalogue in Word format using a PSCredential and API key.
 PS C:\>New-BricksetCatalogue -Format Word -Credential (Get-Credential) -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
 
-# Creates a Brickset catalogue in HTML, Word and Text formats using the specified username, password and API key.
-PS C:\>New-BricksetCatalogue -Format HTML,Word,Text -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
+# Creates a Brickset catalogue in HTML & Word formats using the specified username, password and API key.
+PS C:\>New-BricksetCatalogue -Format HTML,Word -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
 ```
 
 ## :pencil: Notes
