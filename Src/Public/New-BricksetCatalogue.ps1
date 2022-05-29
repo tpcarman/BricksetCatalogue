@@ -1,12 +1,12 @@
 function New-BricksetCatalogue {
     <#
     .SYNOPSIS
-        Creates a Word/HTML/Text catalogue of LEGO sets from a Brickset inventory using the Brickset API.
+        Creates an inventory catalogue of a Brickset collection in HTML & Word formats using the Brickset API.
     .DESCRIPTION
-        Creates a Word/HTML/Text catalogue of LEGO sets from a Brickset inventory using the Brickset API.
+        Creates an inventory catalogue of a Brickset collection in HTML & Word formats using the Brickset API - https://brickset.com/article/52664/api-version-3-documentation.
     .PARAMETER Format
         Specifies the output format of the catalogue.
-        The supported output formats are WORD, HTML & TEXT.
+        The supported output formats are HTML & WORD.
         Multiple output formats may be specified, separated by a comma.
     .PARAMETER Credential
         Specifies the stored credential for the Brickset API.
@@ -43,10 +43,10 @@ function New-BricksetCatalogue {
         PS C:\>New-BricksetCatalogue -Format Word -Credential (Get-Credential) -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
         Creates a Brickset catalogue in Word format using a PSCredential and API key.
     .EXAMPLE
-        PS C:\>New-BricksetCatalogue -Format HTML,Word,Text -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
-        Creates a Brickset catalogue in HTML, Word and Text formats using the specified username, password and API key.
+        PS C:\>New-BricksetCatalogue -Format HTML,Word -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
+        Creates a Brickset catalogue in HTML and Word formats using the specified username, password and API key.
     .NOTES
-        Version:        0.1.0
+        Version:        0.1.1
         Author:         Tim Carman
         Twitter:        @tpcarman
         Github:         tpcarman
@@ -64,7 +64,7 @@ function New-BricksetCatalogue {
             HelpMessage = 'Please provide the Brickset Catalogue output format'
         )]
         [ValidateNotNullOrEmpty()]
-        [ValidateSet('Word', 'HTML', 'Text')]
+        [ValidateSet('Word', 'HTML')]
         [Array] $Format = 'HTML',
 
         [Parameter(
@@ -261,6 +261,7 @@ function New-BricksetCatalogue {
                                         Section -Style Heading4 -ExcludeFromTOC "$($SetOwned.Number): $($SetOwned.Name)" {
                                             $Instructions = Get-BricksetSetInstructions -setId $SetOwned.setId
                                             Image -Uri $SetOwned.image.thumbnailURL -Align Center
+                                            Blankline
                                             $SetOwnedInfo = [PSCustomObject] @{
                                                 'Set Number' = $SetOwned.Number
                                                 'Name' = $SetOwned.Name
@@ -310,6 +311,7 @@ function New-BricksetCatalogue {
                                         Section -Style Heading4 -ExcludeFromTOC "$($SetWanted.Number): $($SetWanted.Name)" {
                                             $Instructions = Get-BricksetSetInstructions -setId $SetWanted.setId
                                             Image -Uri $SetWanted.image.thumbnailURL -Align Center
+                                            Blankline
                                             $SetWantedInfo = [PSCustomObject] @{
                                                 'Set Number' = $SetWanted.Number
                                                 'Name' = $SetWanted.Name
@@ -361,6 +363,7 @@ function New-BricksetCatalogue {
                             foreach ($MinfigOwned in $BricksetMinifigOwned) {
                                 Section -Style Heading3 -ExcludeFromTOC "$($MinfigOwned.minifigNumber): $($MinfigOwned.Name)" {
                                     Image -Uri "https://img.bricklink.com/ItemImage/MN/0/$($MinfigOwned.minifigNumber).png" -Align Center -Percent 50 -Text $($MinfigOwned.minifigNumber)
+                                    Blankline
                                     $MinifigOwnedInfo = [PSCustomObject]@{
                                         'Name' = $MinfigOwned.Name
                                         'Number' = $MinfigOwned.minifigNumber
@@ -384,6 +387,7 @@ function New-BricksetCatalogue {
                             foreach ($MinifigWanted in $BricksetMinifigWanted) {
                                 Section -Style Heading3 -ExcludeFromTOC "$($MinifigWanted.minifigNumber): $($MinifigWanted.Name)" {
                                     Image -Uri "https://img.bricklink.com/ItemImage/MN/0/$($MinifigWanted.minifigNumber).png" -Align Center -Percent 50 -Text $($MinifigWanted.minifigNumber)
+                                    Blankline
                                     $MinifigOwnedInfo = [PSCustomObject]@{
                                         'Name' = $MinifigWanted.Name
                                         'Number' = $MinifigWanted.minifigNumber
