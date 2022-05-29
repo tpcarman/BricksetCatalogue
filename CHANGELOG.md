@@ -2,10 +2,10 @@
 
 
 ## [0.1.1] - 2022-05-29
-## Fixed
+### Fixed
 - Add blankline between image and table to improve formatting.
 
-## Removed
+### Removed
 - Remove Text output due to formatting issues
 ## [0.1.0] - 2022-05-29
 ### Added
