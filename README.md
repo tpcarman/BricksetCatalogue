@@ -7,12 +7,12 @@
         <img src="https://img.shields.io/powershellgallery/p/BricksetCatalogue.svg" /></a>
 </p>
 <p align="center">
-    <a href="https://github.com/AsBuiltReport/BricksetCatalogue/graphs/commit-activity" alt="GitHub Last Commit">
-        <img src="https://img.shields.io/github/last-commit/AsBuiltReport/BricksetCatalogue/master.svg" /></a>
-    <a href="https://raw.githubusercontent.com/AsBuiltReport/BricksetCatalogue/master/LICENSE" alt="GitHub License">
-        <img src="https://img.shields.io/github/license/AsBuiltReport/BricksetCatalogue.svg" /></a>
-    <a href="https://github.com/AsBuiltReport/BricksetCatalogue/graphs/contributors" alt="GitHub Contributors">
-        <img src="https://img.shields.io/github/contributors/AsBuiltReport/BricksetCatalogue.svg"/></a>
+    <a href="https://github.com/tpcarman/BricksetCatalogue/graphs/commit-activity" alt="GitHub Last Commit">
+        <img src="https://img.shields.io/github/last-commit/tpcarman/BricksetCatalogue/master.svg" /></a>
+    <a href="https://raw.githubusercontent.com/tpcarman/BricksetCatalogue/master/LICENSE" alt="GitHub License">
+        <img src="https://img.shields.io/github/license/tpcarman/BricksetCatalogue.svg" /></a>
+    <a href="https://github.com/tpcarman/BricksetCatalogue/graphs/contributors" alt="GitHub Contributors">
+        <img src="https://img.shields.io/github/contributors/tpcarman/BricksetCatalogue.svg"/></a>
 </p>
 
 # BricksetCatalogue
