@@ -1,12 +1,12 @@
 function New-BricksetCatalogue {
     <#
     .SYNOPSIS
-        Creates an inventory catalogue of a Brickset collection in HTML & Word formats using the Brickset API.
+        Creates an inventory catalogue of a Brickset collection in HTML, Text & Word formats using the Brickset API.
     .DESCRIPTION
-        Creates an inventory catalogue of a Brickset collection in HTML & Word formats using the Brickset API - https://brickset.com/article/52664/api-version-3-documentation.
+        Creates an inventory catalogue of a Brickset collection in HTML, Text & Word formats using the Brickset API - https://brickset.com/article/52664/api-version-3-documentation.
     .PARAMETER Format
         Specifies the output format of the catalogue.
-        The supported output formats are HTML & WORD.
+        The supported output formats are HTML, Text & WORD.
         Multiple output formats may be specified, separated by a comma.
     .PARAMETER Credential
         Specifies the stored credential for the Brickset API.
@@ -43,10 +43,10 @@ function New-BricksetCatalogue {
         PS C:\>New-BricksetCatalogue -Format Word -Credential (Get-Credential) -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
         Creates a Brickset catalogue in Word format using a PSCredential and API key.
     .EXAMPLE
-        PS C:\>New-BricksetCatalogue -Format HTML,Word -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
-        Creates a Brickset catalogue in HTML and Word formats using the specified username, password and API key.
+        PS C:\>New-BricksetCatalogue -Format HTML,Text,Word -Username 'tim@lego.com' -Password 'LEGO!' -ApiKey 'cgY-67-tYUip' -OutputFolder 'C:\MyDocs'
+        Creates a Brickset catalogue in HTML, Text and Word formats using the specified username, password and API key.
     .NOTES
-        Version:        0.1.2
+        Version:        0.1.3
         Author:         Tim Carman
         Twitter:        @tpcarman
         Github:         tpcarman
@@ -64,7 +64,7 @@ function New-BricksetCatalogue {
             HelpMessage = 'Please provide the Brickset Catalogue output format'
         )]
         [ValidateNotNullOrEmpty()]
-        [ValidateSet('Word', 'HTML')]
+        [ValidateSet('Word', 'HTML', 'Text')]
         [Array] $Format = 'HTML',
 
         [Parameter(

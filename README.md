@@ -15,6 +15,10 @@
         <img src="https://img.shields.io/github/contributors/tpcarman/BricksetCatalogue.svg"/></a>
 </p>
 
+<p align="center">
+    <a href='https://ko-fi.com/B0B7DDGZ7' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+</p>
+
 # BricksetCatalogue
 BricksetCatalogue creates a catalogue of LEGO sets and minifigs from a [Brickset](https://brickset.com/) inventory using the [Brickset API](https://brickset.com/article/52664/api-version-3-documentation).
 

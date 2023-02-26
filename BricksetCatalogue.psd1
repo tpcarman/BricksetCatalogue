@@ -12,7 +12,7 @@
 RootModule = 'BricksetCatalogue.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.2'
+ModuleVersion = '0.1.3'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -30,7 +30,7 @@ Author = 'Tim Carman'
 Copyright = '(c) Tim Carman. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Creates an inventory catalogue of a Brickset collection in HTML & Word formats using the Brickset API.'
+Description = 'Creates an inventory catalogue of a Brickset collection in HTML, Text & Word formats using the Brickset API.'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''
