@@ -1,5 +1,5 @@
 name: Change Request
-description: Suggest an idea for this project
+description: Request a new feature or an improvement
 labels: ["change request"]
 assignees:
   - tpcarman
